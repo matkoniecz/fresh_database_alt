@@ -1,3 +1,12 @@
+#!/bin/bash
+set -Eeuox pipefail
+IFS=$'\n\t'
+
+err_report() {
+    echo "Error on line $1"
+}
+trap 'err_report $LINENO' ERR
+
 # Setting up a local development environment
 
 sudo apt-get update

@@ -1,3 +1,26 @@
+#!/bin/bash
+set -Eeuox pipefail
+IFS=$'\n\t'
+
+err_report() {
+    echo "Error on line $1"
+}
+trap 'err_report $LINENO' ERR
+
+if [[ -e ~/.bash_profile ]] ; then
+    if [[ -e ~/.bash_profile ]] ; then
+        echo ".profile file is existing, likely created by the previous step"
+        echo "This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login exists."
+        exit 1
+    fi
+fi
+if [[ -e ~/.bash_profile ]] ; then
+    if [[ -e ~/.bash_profile ]] ; then
+        echo ".profile file is existing, likely created by the previous step"
+        echo "This file is not read by bash(1), if ~/.bash_login or ~/.bash_login exists."
+        exit 1        
+    fi
+fi
 service postgresql start
 sudo locale-gen en_US.UTF-8
 sudo sed -i "s/#\?listen_address.*/listen_addresses '*'/" /etc/postgresql/10/main/postgresql.conf
