@@ -6,6 +6,9 @@ sudo apt-get install -y build-essential git vim-nox wget curl
 sudo apt-get install -y python3 python3-pip python3-dev python3-venv
 sudo apt-get install -y postgresql postgresql-contrib libpq-dev postgis postgresql-12-postgis-3
 sudo apt-get install -y gdal-bin libspatialindex-dev libgeos-dev libproj-dev
+cd ~/Desktop
+mkdir outer_colouring_london_folder
+cd outer_colouring_london_folder
 git clone https://github.com/colouring-london/colouring-london.git
 export NODE_VERSION=v12.14.1
 export DISTRO=linux-x64
