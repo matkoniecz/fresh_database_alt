@@ -10,7 +10,7 @@ trap 'err_report $LINENO' ERR
 # Setting up a local development environment
 
 sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get upgrade -y
 sudo apt-get install -y build-essential git vim-nox wget curl
 sudo apt-get install -y python3 python3-pip python3-dev python3-venv
 sudo apt-get install -y postgresql postgresql-contrib libpq-dev postgis postgresql-12-postgis-3
