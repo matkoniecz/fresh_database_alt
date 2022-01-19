@@ -26,10 +26,18 @@ sudo mkdir /usr/local/lib/node
 sudo tar xf node-$NODE_VERSION-$DISTRO.tar.xz -C /usr/local/lib/node
 sudo mv /usr/local/lib/node/node-$NODE_VERSION-$DISTRO /usr/local/lib/node/node-$NODE_VERSION
 rm node-$NODE_VERSION-$DISTRO.tar.xz
+
 cat >> ~/.profile <<EOF
 export NODEJS_HOME=/usr/local/lib/node/node-$NODE_VERSION/bin
 export PATH=\$NODEJS_HOME:\$PATH
 EOF
+
+# to support interactive VM
+cat >> ~/.bashrc <<EOF
+export NODEJS_HOME=/usr/local/lib/node/node-$NODE_VERSION/bin
+export PATH=\$NODEJS_HOME:\$PATH
+EOF
+
 source ~/.profile
 echo $PATH
 echo $NODEJS_HOME
