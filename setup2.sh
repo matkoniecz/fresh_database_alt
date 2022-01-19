@@ -7,15 +7,15 @@ err_report() {
 }
 trap 'err_report $LINENO' ERR
 
-if [[ -e ~/.bash_profile ]] ; then
+if [[ -e ~/.profile ]] ; then
     if [[ -e ~/.bash_profile ]] ; then
         echo ".profile file is existing, likely created by the previous step"
         echo "This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login exists."
         exit 1
     fi
 fi
-if [[ -e ~/.bash_profile ]] ; then
-    if [[ -e ~/.bash_profile ]] ; then
+if [[ -e ~/.profile ]] ; then
+    if [[ -e ~/.bash_login ]] ; then
         echo ".profile file is existing, likely created by the previous step"
         echo "This file is not read by bash(1), if ~/.bash_login or ~/.bash_login exists."
         exit 1        
