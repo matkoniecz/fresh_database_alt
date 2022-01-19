@@ -15,6 +15,9 @@ sudo apt-get install -y --quiet build-essential git vim-nox wget curl
 sudo apt-get install -y --quiet python3 python3-pip python3-dev python3-venv
 sudo apt-get install -y --quiet postgresql postgresql-contrib libpq-dev postgis postgresql-12-postgis-3
 sudo apt-get install -y --quiet gdal-bin libspatialindex-dev libgeos-dev libproj-dev
+
+sudo apt-get install -y --quiet libvips-dev # solves sharp build error
+
 cd ~/Desktop
 mkdir outer_colouring_london_folder
 cd outer_colouring_london_folder
