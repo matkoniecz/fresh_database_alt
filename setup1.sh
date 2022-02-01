@@ -16,7 +16,7 @@ sudo apt-get install -y --quiet python3 python3-pip python3-dev python3-venv
 sudo apt-get install -y --quiet postgresql postgresql-contrib libpq-dev postgis postgresql-12-postgis-3
 sudo apt-get install -y --quiet gdal-bin libspatialindex-dev libgeos-dev libproj-dev
 
-sudo apt-get install -y --quiet libvips-dev # solves sharp build error
+sudo apt-get install -y --quiet libvips-dev libvips-tools glib2.0-dev # supposed to solve sharp build error (is having all necessary? Is it even working?)
 
 cd ~/Desktop
 mkdir outer_colouring_london_folder
