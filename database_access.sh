@@ -10,6 +10,11 @@ SET search_path TO reference_tables;
 \dt
 SELECT * FROM buildings_landuse_class;
 
+
+SELECT current_landuse_order
+FROM buildings
+WHERE current_landuse_order= 'Unclassified buildings';
+
 SELECT
     geometry_id,
     current_landuse_order,
