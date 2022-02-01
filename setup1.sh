@@ -44,4 +44,3 @@ EOF
 source ~/.profile
 echo $PATH
 echo $NODEJS_HOME
-
